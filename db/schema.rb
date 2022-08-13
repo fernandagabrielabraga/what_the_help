@@ -62,4 +62,3 @@ ActiveRecord::Schema.define(version: 2022_08_13_134304) do
   add_foreign_key "donations", "categories"
   add_foreign_key "donations", "users"
 end
-git 
