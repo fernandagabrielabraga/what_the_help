@@ -21,3 +21,10 @@
   <%= cl_image_tag donation.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
 
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+<% if current_user  %>
+  <div class="d-flex justify-content-center mt-5">
+    <%= link_to "sair", destroy_user_session_path, method: :delete, class: "btn btn-dark w-25 "  %>
+  </div>
+<% end  %>

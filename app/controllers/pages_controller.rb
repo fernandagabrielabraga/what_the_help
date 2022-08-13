@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def home
     @donations = Donation.all
   end
+
+  def log_out
+  end
+  
 end
