@@ -270,7 +270,10 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+<<<<<<< HEAD
   x86_64-darwin-20
+=======
+>>>>>>> 2ee6757 (schema edited)
   x86_64-darwin-21
   x86_64-linux
 
