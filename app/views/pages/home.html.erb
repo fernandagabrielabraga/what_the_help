@@ -48,9 +48,6 @@
 </div>
 
 
-<% @donations.each do |donation| %>
-  <%= cl_image_tag donation.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
 
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>

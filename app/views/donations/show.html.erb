@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <div class="card my-3">
+    <div>
+      <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
+    </div>
+    <h2 class="text-center my-3"><%= @donation.donation_name %></h2>
+    <p class="ms-3"><%= @donation.description%></p>
+    <p class="ms-3">Category : <%= @donation.category%></p>
+    <p class="ms-3">Quantity :<%= @donation.quantity %></p>
+    <p class="ms-3">Address : <%= @donation.address %></p>
+  </div>
+  <% if @donation.user_id == current_user.id %>
+    <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
+  <% else %>
+    <%= link_to "Donation", method: :patch, class: " btn btn-success",  data: { confirm: 'Yau are going to be direct to a chat!' } %>
+    <%= link_to 'Back', donations_path, class: "btn btn-primary" %>
+  <% end %>
+</div>
