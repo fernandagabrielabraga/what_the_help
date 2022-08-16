@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>Teste</h1>
+  <div class="row">
+    <% @donations.each do |donation| %>
+      <div class="card-trip  ">
+        <div>
+          <%= cl_image_tag donation.image.key, height: 300, width: 400, crop: :fill if donation.image.key%>
+        </div>
+        <br>
+
+        <div class="card-trip-infos">
+          <div>
+           <h2><%= donation.product_name %></h2>
+          </div>
+        </div>
+        <br>
+
+        <div>
+          <%= link_to 'Details', donation,class:"btn btn-outline-primary rounded-4 ms-2 mb-2" %>
+          <br>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
