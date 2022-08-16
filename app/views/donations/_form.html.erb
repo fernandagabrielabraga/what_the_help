@@ -1,5 +1,10 @@
-  <%= simple_form_for(donation) do |f| %>
-    <!-- [...] -->
-    <%= f.input :photo, as: :file %>
-    <!-- [...] -->
-  <% end %>
+  <div class="container">
+    <%= simple_form_for @donation do |f| %>
+      <%= f.input :donation_name, label: 'Add your donation name here', error: 'Donation name is mandatory, please specify one' %>
+      <%= f.input :quantity, label: 'Add the quantity here.' %>
+      <%= f.input :description, label: 'What is the necessity of your donation? Add the description here' %>
+      <%= f.input :location, label: 'Add your location here , city, state, country' %>
+      <%= f.input :image, as: :file %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
