@@ -1,21 +1,52 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!--analisys><h1>Pages#home</h1>
 
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Find me in app/views/pages/home.html.erb</p>
-<br>
+<body class="d-flex flex-column">
+  <!-- For demo purpose -->
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+    <div class="px-lg-5">
+      <div class="row py-5">
+        <div class="col-lg-12 mx-auto text-center">
+          <h1 class="display-4">WHAT THE <strong>{ HELP }</strong></h1>
+          <p class="lead mb-0">Help a Build a new history here</p>
+          <p class="lead"><a href="https://github.com/fernandagabrielabraga/what_the_help/branches">
+                        <u>Developers working here</u></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End -->
+  <br>
+  <br>
+  <br>
+
+ <div class="col-lg-12 mx-auto text-white text-center" >
+    <h2>Discover who you can help here!</h2>
+    <form  class="flex-form col-lg-12 mx-auto text-white text-center">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="search" placeholder="Where do you want to go?">
+      <input type="submit" value="Search">
+    </form>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+</div>
+
 
 <% @donations.each do |donation| %>
   <%= cl_image_tag donation.photo.key, height: 300, width: 400, crop: :fill %>
@@ -28,3 +59,4 @@
     <%= link_to "sair", destroy_user_session_path, method: :delete, class: "btn btn-dark w-25 "  %>
   </div>
 <% end  %>
+
