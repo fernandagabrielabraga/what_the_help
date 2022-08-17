@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_13_210309) do
+ActiveRecord::Schema.define(version: 2022_08_17_003841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,9 +61,8 @@ ActiveRecord::Schema.define(version: 2022_08_13_210309) do
   create_table "donations", force: :cascade do |t|
     t.string "donation_name"
     t.string "description"
-    t.text "image"
     t.text "location"
-    t.boolean "is_donation"
+    t.boolean "is_donation", default: true
     t.integer "quantity"
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false

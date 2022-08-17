@@ -12,3 +12,5 @@ Category.create!(name: 'Animals')
 Category.create!(name: 'Volunteer')
 Category.create!(name: 'Charity')
 Category.create!(name: 'Memorial')
+
+# Caso queira adicionar uma categoria nova realizar pelo rails c no Heroku ou criar uma condição
