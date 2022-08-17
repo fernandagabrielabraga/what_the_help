@@ -3,8 +3,8 @@
       <%= f.input :donation_name, label: 'Add your donation name here', error: 'Donation name is mandatory, please specify one' %>
       <%= f.input :quantity, label: 'Add the quantity here.' %>
       <%= f.input :description, label: 'What is the necessity of your donation? Add the description here' %>
-      <%= f.input :category_id, label: 'Choose the category of the donation' %>
-      <%= f.input :location, label: 'Add your location here , city, state, country' %>
+      <%= f.association :category, collection: Category.order(:name), prompt: 'Choose a Category' %>
+      <%= f.input :location, prompt: 'Add your city, state and country here' %>
       <%= f.input :image, as: :file %>
       <%= f.button :submit %>
     <% end %>
