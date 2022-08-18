@@ -1,8 +1,9 @@
   <div class="container">
     <%= simple_form_for @donation do |f| %>
       <%= f.input :donation_name, label: 'Add your donation name here', error: 'Donation name is mandatory, please specify one' %>
+      <%= f.input :is_donation, as: :select, collection: [['Yes',true], ['No',false]], label: 'If is donation "Yes", if is a needed "No"' %>
       <%= f.input :quantity, label: 'Add the quantity here.' %>
-      <%= f.input :description, label: 'What is the necessity of your donation? Add the description here' %>
+      <%= f.input :description, label: 'What is the necessity of your needed/donation? Add the description here' %>
       <%= f.association :category, collection: Category.order(:name), prompt: 'Choose a Category' %>
       <%= f.input :location, prompt: 'Add your city, state and country here' %>
       <%= f.input :image, as: :file %>
