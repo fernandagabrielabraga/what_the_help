@@ -2,7 +2,7 @@ class DonationPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.where(is_donation: true)
+      scope
     end
   end
 
