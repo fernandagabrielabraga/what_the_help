@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_17_003841) do
+ActiveRecord::Schema.define(version: 2022_08_18_230743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,14 +62,11 @@ ActiveRecord::Schema.define(version: 2022_08_17_003841) do
     t.string "donation_name"
     t.string "description"
     t.text "location"
-    t.boolean "is_donation", default: true
     t.integer "quantity"
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
     t.index ["category_id"], name: "index_donations_on_category_id"
     t.index ["user_id"], name: "index_donations_on_user_id"
   end
@@ -85,9 +82,6 @@ ActiveRecord::Schema.define(version: 2022_08_17_003841) do
     t.string "first_name"
     t.string "last_name"
     t.text "photo"
-    t.float "latitude"
-    t.float "longitude"
-    t.string "address"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
