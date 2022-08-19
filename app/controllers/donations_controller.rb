@@ -4,6 +4,14 @@ class DonationsController < ApplicationController
 
   def index
     @donations = policy_scope(Donation).order(created_at: :desc)
+
+    @markers = @donations.geocoded.map do |donation|
+      {
+        lat: donation.latitude,
+        lng: donation.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { donation: donation })
+      }
+    end
   end
 
   def show

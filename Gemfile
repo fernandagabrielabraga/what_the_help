@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Cloudinary
-gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'cloudinary', '~> 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
@@ -29,6 +29,9 @@ gem 'file_validators'
 gem 'pundit'
 gem 'jquery-rails'
 
+
+#geocoder
+gem "geocoder"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

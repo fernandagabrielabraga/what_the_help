@@ -1,4 +1,5 @@
 class Donation < ApplicationRecord
+
   has_one_attached :image
   belongs_to :user
   belongs_to :category
@@ -14,4 +15,7 @@ class Donation < ApplicationRecord
                   using: {
                     tsearch: { prefix: true } # <-- now half of the word will return something!
                   }
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
