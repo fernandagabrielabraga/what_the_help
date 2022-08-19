@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_17_003841) do
+ActiveRecord::Schema.define(version: 2022_08_18_230743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 2022_08_17_003841) do
     t.string "donation_name"
     t.string "description"
     t.text "location"
-    t.boolean "is_donation"
     t.integer "quantity"
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false
