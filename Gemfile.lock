@@ -110,11 +110,10 @@ GEM
     erubi (1.11.0)
     execjs (2.7.0)
     ffi (1.15.5)
-
     file_validators (3.0.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
-    font-awesome-sass (5.6.1)
+    font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     geocoder (1.8.0)
     globalid (1.0.0)
@@ -292,11 +291,9 @@ DEPENDENCIES
   cloudinary (~> 1.16.0)
   devise
   dotenv-rails
-
   file_validators
-  font-awesome-sass (~> 5.6.1)
+  font-awesome-sass (~> 5.15.1)
   geocoder
-
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
@@ -323,4 +320,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.17
+   2.3.19
