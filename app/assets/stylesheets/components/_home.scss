@@ -1,18 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inconsolata:wght@300;400&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
 
-body {
+.banner {
   background: #ff5f6d;
   background: -webkit-linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   background: linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   min-height: 100vh;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 50px;
 }
 
+.image{
+  width: 700px;
+  height: 646px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+}
+
+.image{
+  width: 700px;
+  height: 646px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.call-to-action {
+  text-align: center;
+}
 .cover {
   font-family: 'lato',  sans-serif;
 }
 
 h1, .lead {
-  color: whitesmoke;
+  color: rgb(70, 74, 70);
+  font-family: 'Hubballi', cursive;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
+
+  color: black;
 }
 
 *, *:before, *:after {
@@ -45,7 +73,7 @@ ul, nav{
 }
 
 a {
-  color: #fff;
+  color: #56585b;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
@@ -58,7 +86,7 @@ a:hover {
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  color: #56585b;
   margin: 0 0 1.5rem;
 }
 
@@ -75,7 +103,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #56585b;
   padding: 10px 100px 0;
 }
 
@@ -95,8 +123,9 @@ header nav li:last-child{
   margin-right: 0;
 }
 
+
 a.btn {
-  color: #fff;
+  color: #0d9573;
   padding: 10px;
   border: 1px solid rgba(255,255,255,0.5);
   -webkit-transition: all 0.2s;
@@ -105,8 +134,8 @@ a.btn {
 }
 
 a.btn:hover {
-  background: #d73851;
-  border: 1px solid #d73851;
+  background: #0d9573;
+  border: 1px solid #0d9573;
   color: #fff;
 }
 
@@ -129,8 +158,8 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"] {
-  background: #ef3f5a;
-  border: 1px solid #ef3f5a;
+  background: #0d9573;
+  border: 1px solid #0d9573;
   color: #fff;
   padding: 0 30px;
   cursor: pointer;
@@ -140,8 +169,8 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"]:hover {
-  background: #d73851;
-  border: 1px solid #d73851;
+  background: #0d9573;
+  border: 1px solid #0d9573;
 }
 
 .flex-form {
