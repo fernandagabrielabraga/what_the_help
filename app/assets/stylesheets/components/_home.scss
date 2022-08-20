@@ -1,18 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-body {
+.banner {
   background: #ff5f6d;
   background: -webkit-linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   background: linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   min-height: 100vh;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 50px;
 }
 
+.image{
+  width: 700px;
+  height: 646px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.call-to-action {
+  text-align: center;
+}
 .cover {
   font-family: 'lato',  sans-serif;
 }
 
 h1, .lead {
-  color: whitesmoke;
+  color: black;
 }
 
 *, *:before, *:after {
