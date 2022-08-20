@@ -1,0 +1,33 @@
+.btn-success {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-success(#167FFB, #28A745);
+  transition: background 0.3s ease;
+  border: 1px solid #28A745;
+}
+x
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
+.btn-danger {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: black;
+}
