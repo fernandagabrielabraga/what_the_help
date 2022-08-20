@@ -13,7 +13,7 @@
     <div class=" d-flex">
       <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
-      <%= link_to 'Back', edit_donation_path(@donation), class:"btn btn-warning"%>
+      <%= link_to 'Back', donations_path, class:"btn btn-warning"%>
     </div>
   <% else %>
     <%= link_to "Donation", method: :patch, class: " btn btn-success",  data: { confirm: 'Yau are going to be direct to a chat!' } %>
