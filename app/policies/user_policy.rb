@@ -1,17 +1,9 @@
-class DonationPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-    def resolve
-      scope
-    end
-  end
-
-  def show?
-    true
-  end
-
-  def create?
-    true
+    # def resolve
+    #   scope.all
+    # end
   end
 
   def update?
@@ -20,7 +12,7 @@ class DonationPolicy < ApplicationPolicy
     # - user:   the `current_user` signed in with Devise.
   end
 
-  def destroy?
-    record.user == user
+  def show?
+    true
   end
 end

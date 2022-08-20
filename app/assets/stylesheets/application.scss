@@ -8,6 +8,17 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html, body {
+  min-height: 100vh;
+  bottom:0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}

@@ -11,5 +11,4 @@ class PagesController < ApplicationController
 
   def log_out
   end
-  
 end

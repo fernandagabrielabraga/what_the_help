@@ -5,13 +5,16 @@
     </div>
     <h2 class="text-center my-3"><%= @donation.donation_name %></h2>
     <p class="ms-3"><%= @donation.description%></p>
-    <p class="ms-3">Category : <%= @donation.category%></p>
+    <p class="ms-3">Category : <%= @donation.category.name%></p>
     <p class="ms-3">Quantity :<%= @donation.quantity %></p>
-    <p class="ms-3">Address : <%= @donation.address %></p>
+    <p class="ms-3">Address : <%= @donation.location %></p>
   </div>
   <% if @donation.user_id == current_user.id %>
-    <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
+    <div class=" d-flex">
+      <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
+      <%= link_to 'Back', edit_donation_path(@donation), class:"btn btn-warning"%>
+    </div>
   <% else %>
     <%= link_to "Donation", method: :patch, class: " btn btn-success",  data: { confirm: 'Yau are going to be direct to a chat!' } %>
     <%= link_to 'Back', donations_path, class: "btn btn-primary" %>
