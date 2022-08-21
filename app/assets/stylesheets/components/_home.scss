@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inconsolata:wght@300;400&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
 
-body {
-  background: #ff5f6d;
+
+.banner {
+  background: #20a05c;
   background: -webkit-linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   background: linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   min-height: 100vh;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 50px;
 }
 
-.cover {
-  font-family: 'lato',  sans-serif;
+.image{
+  width: 700px;
+  height: 646px;
+  border-radius: 15px;
+  object-fit: cover;
 }
 
-h1, .lead {
-  color: whitesmoke;
+.call-to-action {
+  text-align: center;
 }
 
 *, *:before, *:after {
@@ -58,8 +66,18 @@ a:hover {
 h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  color: #6e7177;
+  font-family: 'Hubballi', cursive;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
   margin: 0 0 1.5rem;
+}
+
+.paragraph {
+  color: #6e7177;
+  font-family: 'Hubballi', cursive;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 
 i {
@@ -75,7 +93,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #56585b;
+  font-family: 'Hubballi', cursive;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Open Sans', sans-serif;
   padding: 10px 100px 0;
 }
 
@@ -96,17 +117,17 @@ header nav li:last-child{
 }
 
 a.btn {
-  color: #fff;
+  color: #3ba396;
   padding: 10px;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid #3ba396;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a.btn:hover {
-  background: #d73851;
-  border: 1px solid #d73851;
+  background: #3ba396;
+  border: 1px solid #1f610f;
   color: #fff;
 }
 
@@ -129,9 +150,10 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"] {
-  background: #ef3f5a;
-  border: 1px solid #ef3f5a;
-  color: #fff;
+  background: #44b8ab;
+  border: 1px solid #44b8ab;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.925);
   padding: 0 30px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -140,8 +162,8 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"]:hover {
-  background: #d73851;
-  border: 1px solid #d73851;
+  background: #3ba396;
+  border: 1px solid #3ba396;
 }
 
 .flex-form {
@@ -150,7 +172,7 @@ a.btn:hover {
   z-index: 10;
   position: relative;
   width: 500px;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .flex-form > * {
@@ -202,10 +224,6 @@ input[type="search"] {
 
   header h2 {
     margin-bottom: 15px;
-  }
-
-  h1 {
-    font-size: 2rem;
   }
 
   .cover {

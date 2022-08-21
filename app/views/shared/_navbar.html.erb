@@ -1,8 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="position-fixed navbar navbar-expand-sm navbar-light navbar-lewagon z-30 w-100">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%= image_tag ("logo2.png") %>
     <% end %>
+
+    <form  class="flex-form col-lg-12 mx-auto text-white text-center">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="search" placeholder="Find out how to help today">
+      <input type="submit" value="Search" class="btn btn-primary z-20">
+    </form>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
