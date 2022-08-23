@@ -2,37 +2,19 @@
 <div body class="d-flex">
   <!-- For demo purpose -->
   <div class="container-fluid">
-    <div class="col-lg-12 d-flex justify-content-center mx-auto text-white text-center">
-      <div class="d-flex flex-column bg-primary pe-4 p m-2">
+    <div class="col-lg-12 d-flex justify-content-center align-items-center mx-auto text-white text-center">
+      <div class="d-flex flex-column pe-4 p m-2">
         <div class="call-to-action d-flex flex-column">
           <h1 class="display-4">what the <strong>HELP!</strong></h1>
           <p class="lead mb-0">Not all heroes wear capes. Be someone's hero and support a cause today</p>
+          <br>
           <%=link_to "#" do %>
             <p class="btn btn-primary"><i class="fa-solid fa-hand-heart"></i>Find out more</p>
           <%end%>
         </div>
-        <h2>Not all heroes wear capes. Be someone's hero here!</h2>
-        <form  class="flex-form col-lg-12 mx-auto text-white text-center">
-          <label for="from">
-            <i class="ion-location"></i>
-          </label>
-          <input type="search" placeholder="Where do you want to go?">
-          <input type="submit" value="Search">
-        </form>
       </div>
       <img class="image" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
    </div>
   </div>
 
 </div>
-
-
-
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-<% if current_user  %>
-  <div class="d-flex justify-content-center mt-5">
-    <%= link_to "sair", destroy_user_session_path, method: :delete, class: "btn btn-dark w-25 "  %>
-  </div>
-<% end  %>
-
