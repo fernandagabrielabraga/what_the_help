@@ -1,28 +1,28 @@
-<div class="container my-5">
-  <div class="card my-3 d-flex justify-content-center" style="width: 22rem;">
-    <div>
-      <%#cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill if donation.image.key%>
-    </div>
+<div class="container my-3">
+  <div class="card my-3 d-flex justify-content-around align-items-center", style= "width: 384px;">
+    <br>
+    <h5 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h5>
+    <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
+    <div class="card" style="width: 24rem;">
+      <div class="card-body">
+        <h6 class="card-infos mb-2 text-muted"><%= @donation.description%></h6>
+        <p class="card-text"><strong>Category: </strong><%= @donation.category.name%></p>
+        <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
+        <p class="card-text"><strong>Address: </strong><%= @donation.location%></p>
 
-  <div class="card" style="width: 22rem;">
-    <div class="card-body">
-      <h6 class="card-subtitle mb-2 text-muted"><%= @donation.description%></h6>
-      <p class="card-text"><strong>Category: </strong><%= @donation.category.name%></p>
-      <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
-      <p class="card-text"><strong>Address: </strong><%= @donation.location%></p>
-
-      <% if @donation.user_id == current_user.id %>
-        <div class=" d-flex justify-content-around">
-          <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
-          <%= link_to 'Back', donations_path, class:"btn btn-warning "%>
-        </div>
-      <% else %>
-        <div class="d-flex justify-content-around">
-          <%= link_to "Donation", "#",class: "btn btn-success", method: :patch, data: { confirm: 'Yau are going to be direct to a chat!' } %>
-          <%= link_to 'Back', donations_path, class: "btn btn-warning" %>
-        </div>
-      <% end %>
+        <% if @donation.user_id == current_user.id %>
+          <div class=" d-flex justify-content-around">
+            <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
+            <%= link_to 'Back', donations_path, class:"btn btn-warning "%>
+          </div>
+        <% else %>
+          <div class="d-flex justify-content-around">
+            <%= link_to "Donation", "#",class: "btn btn-success", method: :patch, data: { confirm: 'Yau are going to be direct to a chat!' } %>
+            <%= link_to 'Back', donations_path, class: "btn btn-warning" %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

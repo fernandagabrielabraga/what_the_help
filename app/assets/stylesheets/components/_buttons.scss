@@ -1,7 +1,8 @@
+a.btn {
+  padding: 8px 24px;
+}
 .btn-success {
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
   font-weight: bold;
   background: linear-success(#167FFB, #28A745);
   transition: background 0.3s ease;
@@ -15,19 +16,15 @@ x
 
 .btn-danger {
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-warning {
+  color: white;
   font-weight: bold;
 }
 
 .btn-primary {
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
   font-weight: bold;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: black;
 }
