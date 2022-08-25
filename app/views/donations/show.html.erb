@@ -20,8 +20,8 @@
             </div>
           <% else %>
             <div class="d-flex justify-content-around">
-              <%= link_to 'Donation', '#',class: "btn btn-success", method: :patch, data: { confirm: 'Yau are going to be direct to a chat!' } %>
-              <%= link_to 'Back', donations_path, class: 'btn btn-warning' %>
+              <%= link_to 'Donate now', root_path, class: "btn btn-success", data: { confirm: 'thank you for your donation' } %>
+              <%= link_to 'Back', root_path, class: 'btn btn-warning' %>
             </div>
           <% end %>
 
