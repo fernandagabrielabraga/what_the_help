@@ -3,14 +3,24 @@ class DonationsController < ApplicationController
   before_action :donation_id, only: %i[show edit update destroy]
 
   def index
-    @donations = policy_scope(Donation).order(created_at: :desc)
-
-    @markers = @donations.geocoded.map do |donation|
-      {
-        lat: donation.latitude,
-        lng: donation.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { donation: donation })
-      }
+    if params[:query].present?
+      @donations = policy_scope(Donation).search_by_donation_name_and_description(params[:query]).order(created_at: :desc)
+      @markers = @donations.geocoded.map do |donation|
+        {
+          lat: donation.latitude,
+          lng: donation.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { donation: donation })
+        }
+      end
+    else
+      @donations = policy_scope(Donation).order(created_at: :desc)
+      @markers = @donations.geocoded.map do |donation|
+        {
+          lat: donation.latitude,
+          lng: donation.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { donation: donation })
+        }
+      end
     end
   end
 
