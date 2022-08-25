@@ -4,6 +4,7 @@ class Donation < ApplicationRecord
   belongs_to :category
 
   has_many :confirmations
+  has_many :chatrooms
 
   validates :description, presence: true, length: { in: 10..200 }
   validates :image, :location, :quantity, :donation_name, presence: true
