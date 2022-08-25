@@ -1,17 +1,22 @@
   <br>
   <div class="container">
-  <h1 class="create__new__donation">ADD your donation here !</h1>
+  <h1 class="create__new__donation">Tell us what you need:</h1>
   </div>
   <div class="container">
     <%= simple_form_for @donation do |f| %>
-      <%= f.input :donation_name, label: 'Add your donation name here', error: 'Donation name is mandatory, please specify one' %>
+      <%= f.input :donation_name, label: 'Add what you need here', error: 'Donation name is mandatory, please specify one' %>
       <%= f.input :quantity, label: 'Add the quantity here.' %>
-      <%= f.input :description, label: 'What is the necessity of your needed/donation? Add the description here' %>
+      <%= f.input :description, label: 'What is the necessity of your needs/donation? Add the description here' %>
       <%= f.association :category, collection: Category.order(:name), prompt: 'Choose a Category' %>
       <%= f.input :location, prompt: 'Add your city, state and country here' %>
       <%= f.input :image, as: :file %>
       <br>
       <%= f.button :submit, class: "btn btn-info" %>
+      <br>
+      <br>
+      <br>
+      <%= link_to 'Back', root_path, class: "btn btn-sucess" %>
+
     <% end %>
   </div>
   <br>
