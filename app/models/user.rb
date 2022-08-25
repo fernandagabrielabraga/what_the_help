@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :donations
   has_many :confirmations
+  has_many :chatrooms, through: :donation
 
   has_one_attached :avatar
 

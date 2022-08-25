@@ -1,29 +1,60 @@
 <br>
 <div class="container my-3">
-  <div class="card my-3 d-flex justify-content-around align-items-center", style= "width: 384px;">
-    <br>
-    <h5 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h5>
-    <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
-    <div class="card" style="width: 24rem;">
-      <div class="card-body">
-        <h6 class="card-infos mb-2 text-muted"><%= @donation.description%></h6>
-        <p class="card-text"><strong>Category: </strong><%= @donation.category.name%></p>
-        <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
-        <p class="card-text"><strong>Address: </strong><%= @donation.location%></p>
+  <div class="row">
+    <div class="card my-3 d-flex justify-content-around align-items-center col-4", style= "width: 384px;">
+      <br>
+      <h5 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h5>
+      <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
+      <div class="card" style="width: 24rem;">
+        <div class="card-body">
+          <h6 class="card-infos mb-2 text-muted"><%= @donation.description %></h6>
+          <p class="card-text"><strong>Category: </strong><%= @donation.category.name %></p>
+          <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
+          <p class="card-text"><strong>Address: </strong><%= @donation.location %></p>
 
-        <% if @donation.user_id == current_user.id %>
-          <div class=" d-flex justify-content-around">
-            <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%= link_to 'Edit', edit_donation_path(@donation), class:"btn btn-primary" %>
-            <%= link_to 'Back', donations_path, class:"btn btn-warning "%>
-          </div>
-        <% else %>
-          <div class="d-flex justify-content-around">
-            <%= link_to "Donation", "#",class: "btn btn-success", method: :patch, data: { confirm: 'Yau are going to be direct to a chat!' } %>
-            <%= link_to 'Back', donations_path, class: "btn btn-warning" %>
+          <% if @donation.user_id == current_user.id %>
+            <div class=" d-flex justify-content-around">
+              <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Edit', edit_donation_path(@donation), class: 'btn btn-primary' %>
+              <%= link_to 'Back', donations_path, class: 'btn btn-warning' %>
+            </div>
+          <% else %>
+            <div class="d-flex justify-content-around">
+              <%= link_to 'Donation', '#',class: "btn btn-success", method: :patch, data: { confirm: 'Yau are going to be direct to a chat!' } %>
+              <%= link_to 'Back', donations_path, class: 'btn btn-warning' %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container chatroom col-7"
+      data-controller="chatroom-subscription"
+      data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+      data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+
+      <h1>#<%= @chatroom.name %></h1>
+      <div class="messages" data-chatroom-subscription-target="messages">
+        <% @chatroom.messages.each do |message| %>
+          <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+            <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+              <%= render 'messages/message', message: message %>
+            </div>
           </div>
         <% end %>
       </div>
+
+      <div>
+        <%= simple_form_for [@chatroom, @message], remote: true, html: {data: {action: 'ajax:success->chatroom-subscription#resetForm' }, class: 'd-flex' } do |f| %>
+          <%= f.input :content,
+          label: false,
+          placeholder: "Message #{@chatroom.name}",
+          wrapper_html: { class: 'flex-grow-1' } %>
+          <%= f.submit 'Send', class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </div>

@@ -15,6 +15,9 @@ class DonationsController < ApplicationController
   end
 
   def show
+    @chatroom = Chatroom.where(user: current_user, donation: @donation).first
+    @chatroom = Chatroom.create!(user: current_user, donation: @donation, name: @donation.donation_name) if @chatroom.nil?
+    @message = Message.new
     authorize @donation
   end
 
@@ -61,4 +64,5 @@ class DonationsController < ApplicationController
   def donation_id
     @donation = Donation.find(params[:id])
   end
+
 end
