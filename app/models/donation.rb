@@ -4,14 +4,14 @@ class Donation < ApplicationRecord
   belongs_to :category
 
   has_many :confirmations
-  has_many :chatrooms
+  has_many :chatrooms, dependent: :destroy
 
   validates :description, presence: true, length: { in: 10..200 }
   validates :image, :location, :quantity, :donation_name, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_donation_name_and_description,
-                  against: [ :donation_name, :description ],
+                  against: [:donation_name, :description],
                   using: {
                     tsearch: { prefix: true } # <-- now half of the word will return something!
                   }

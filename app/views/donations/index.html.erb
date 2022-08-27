@@ -10,8 +10,9 @@
             <%= cl_image_tag donation.image.key, height: 300, width: 382, crop: :fill %>
           </div>
           <div class="card-body d-flex flex-column bg-white w-100">
-            <h5 class="card-title"><%= donation.donation_name %></h5>
+            <h4 class="card-title"><strong><%= donation.donation_name %></strong></h4>
             <p class="card-text"><%= donation.description %></p>
+            <progress class="a-progress-bar" max= "100" value="95"></progress>
             <%= link_to 'Donation', donation,class:"btn btn-primary" %>
           </div>
         </div>
