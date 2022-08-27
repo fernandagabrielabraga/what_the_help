@@ -10,21 +10,21 @@
             <div class="donation-img" style="background-image: url('<%= cl_image_path donation.image.key, crop: :fill %>');">
               <%#= cl_image_tag donation.image.key, height: 300, width: 382, crop: :fill %>
             </div>
-          </div>
-          <div class="card-body d-flex flex-column bg-white donation-body" >
-          <div class="d-flex justify-content-between">
+
+            <div class="card-body d-flex flex-column bg-white donation-body" >
+            <div class="d-flex justify-content-between">
             <h4 class="card-title"><strong><%= donation.donation_name %></strong></h4>
             <div>
               <i class="fas fa-eye"></i> <%= rand(50..1000) %> views <!-- Comentario aqui ><!-->
             </div>
-          </div>
-          <div class="mb-2 mt-2 d-flex align-content-center">
+            </div>
+            <div class="mb-2 mt-2 d-flex align-content-center">
             <label for=""><i class="fas fa-map-marker-alt"></i> <%= donation.location %></label>
-          </div>
+            </div>
             <p class="card-text"><%= donation.description.truncate(100) %></p> <!-- Comentario aqui ><!-->
-          <div class="mb-2 mt-2 d-flex align-content-center">
+            <div class="mb-2 mt-2 d-flex align-content-center">
             <label for=""><i class="fas fa-hands-helping"></i> <%= @helped_people[index] %> persons donated</label>
-          </div>
+            </div>
             <%= link_to 'Donation', donation,class:"btn btn-primary" %>
           </div>
         </div>

@@ -3,17 +3,18 @@ import consumer from "../channels/consumer"
 
 export default class extends Controller {
   static targets = ["messages"]
-  static values = { chatroomId: Number, currentUserId: Number }
+  static values = { chatroomId: Number }
 
   connect() {
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
-      { received: data => this.#insertMessageAndScrollDown(data) }
+     // { received: data => this.#insertMessageAndScrollDown(data) }
+     { received: data => console.log(data) }
     )
     console.log(`Subscribe to the chatroom with the id ${this.chatroomIdValue}.`)
   }
 
-    #justifyClass(currentUserIsSender) {
+    /* #justifyClass(currentUserIsSender) {
       return currentUserIsSender ? "justify-content-end" : "justify-content-start"
     }
 
@@ -32,6 +33,7 @@ export default class extends Controller {
     }
 
     #insertMessageAndScrollDown(data) {
+      console.log(data);
        // Logic to know if the sender is the current_user
       const currentUserIsSender = this.currentUserIdValue === data.sender_id
       // Creating the whole message from the `data.message` String
@@ -48,5 +50,5 @@ export default class extends Controller {
     disconnect() {
       console.log("Unsubscribed from the chatroom")
       this.channel.unsubscribe()
-    }
+    } */
 }

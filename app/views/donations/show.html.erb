@@ -1,11 +1,11 @@
 <br>
 <div class="container my-3">
   <div class="row">
-    <div class="card my-3 d-flex justify-content-around align-items-center col-4", style= "width: 384px;">
+    <div class="donation-card card d-flex flex-column align-items-center m-3">
       <br>
       <h5 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h5>
       <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
-      <div class="card" style="width: 24rem;">
+      <div class="card h-60" style="width: 24rem;">
         <div class="card-body">
           <h6 class="card-infos mb-2 text-muted"><%= @donation.description %></h6>
           <p class="card-text"><strong>Category: </strong><%= @donation.category.name %></p>
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="container chatroom col-7"
+    <div class="container chatroom col-5"
       data-controller="chatroom-subscription"
       data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
       data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
