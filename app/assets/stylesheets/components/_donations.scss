@@ -1,6 +1,5 @@
 .mapbox {
-  border-left: 1px solid;
-  color: rgb(78, 93, 90);
+
 }
 
 .profile_login {
@@ -16,4 +15,28 @@ color: #0D9573;
   background-color: #e6f6ef;
   color: #0D9573;
   border-radius: 15px;
+}
+
+.donation-img {
+  background-size: cover;
+  height: 300px;
+  width: 380px;
+  object-fit: cover;
+}
+
+.donation-body {
+  max-width: 420px;
+  max-height: 280px;
+}
+
+.donation-card {
+  max-width: 395px;
+  width: 395px;
+}
+
+.grid-donations {
+  display:grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
