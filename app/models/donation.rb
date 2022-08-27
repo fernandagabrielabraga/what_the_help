@@ -6,7 +6,7 @@ class Donation < ApplicationRecord
   has_many :confirmations
   has_many :chatrooms, dependent: :destroy
 
-  validates :description, presence: true, length: { in: 10..200 }
+  validates :description, presence: true, length: { in: 10..550 }
   validates :image, :location, :quantity, :donation_name, presence: true
 
   include PgSearch::Model
