@@ -33,7 +33,7 @@ gem 'sprockets-es6'
 
 #geocoder
 gem "geocoder"
-
+gem "open-uri"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
