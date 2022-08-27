@@ -22,6 +22,7 @@ class DonationsController < ApplicationController
         }
       end
     end
+    @helped_people = [55, 75, 89, 100, 250]
   end
 
   def show

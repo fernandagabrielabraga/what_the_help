@@ -1,23 +1,42 @@
 <br>
-<div class="container_donations d-flex">
-  <div class="d-flex justify-content-around mx-2" >
+<div class="container_donations d-flex h-100">
+  <div class="grid-donations mx-2 h-100 overflow-scroll " style="heigth: 50vh;" >
     <% if @donations.empty? %>
       <h3><i class="fas fa-couch"></i> Sorry, couldn't find what you're looking for.</h3>
     <% else %>
-      <% @donations.each do |donation| %>
-        <div class="card d-flex flex-column align-items-center m-5">
-          <div class="d-flex m-2">
-            <%= cl_image_tag donation.image.key, height: 300, width: 382, crop: :fill %>
+      <% @donations.each_with_index do |donation, index| %>
+        <div class="donation-card card d-flex flex-column align-items-center m-3">
+          <div class="d-flex mt-2 px-2">
+            <div class="donation-img" style="background-image: url('<%= cl_image_path donation.image.key, crop: :fill %>');">
+              <%#= cl_image_tag donation.image.key, height: 300, width: 382, crop: :fill %>
+            </div>
           </div>
-          <div class="card-body d-flex flex-column bg-white w-100">
+          <div class="card-body d-flex flex-column bg-white donation-body" >
+          <div class="d-flex justify-content-between">
             <h4 class="card-title"><strong><%= donation.donation_name %></strong></h4>
-            <p class="card-text"><%= donation.description %></p>
-            <progress class="a-progress-bar" max= "100" value="95"></progress>
+            <div>
+              <i class="fas fa-eye"></i> <%= rand(50..1000) %> views <!-- Comentario aqui ><!-->
+            </div>
+          </div>
+          <div class="mb-2 mt-2 d-flex align-content-center">
+            <label for=""><i class="fas fa-map-marker-alt"></i> <%= donation.location %></label>
+          </div>
+            <p class="card-text"><%= donation.description.truncate(100) %></p> <!-- Comentario aqui ><!-->
+          <div class="mb-2 mt-2 d-flex align-content-center">
+            <label for=""><i class="fas fa-hands-helping"></i> <%= @helped_people[index] %> persons donated</label>
+          </div>
             <%= link_to 'Donation', donation,class:"btn btn-primary" %>
           </div>
         </div>
       <% end %>
     <% end %>
+  </div>
+  <div class="flex-grow-1 h-100 mapbox mx-4 mt-3">
+    <div style="width: 100%; height: 100vh;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
       <!--<div class="card-trip col-3 m-4 bg-secondary d-flex flex-col align-items-center">
       <div>
@@ -33,13 +52,6 @@
         <br>
       </div>
     </div>-->
-  <div class="mapbox mx-4 d-flex justify-content-center" style="width: 40vw;">
-    <div style="width: 100%; height: 600px;"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-  </div>
   <br>
 </div>
 <br>
