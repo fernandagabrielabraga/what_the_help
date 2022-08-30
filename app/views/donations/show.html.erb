@@ -1,14 +1,14 @@
 <br>
-<div class="container d-flex h-100 w-100 position-relative ">
-  <div class= "d-flex justify-content-around align-items-center ">
-    <div class="card d-flex justify-content-between align-items-center col-4 w-50 mx-5 mb-4">
-      <h4 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h4>
-      <%= cl_image_tag @donation.image.key, crop: :fill, class: "donation-img w-100 h-60 px-5" %>
-      <div class="card-body w-100">
-        <h6 class="card-infos text-muted"><%= @donation.description %></h6>
-        <p class="card-text"><strong>Category: </strong><%= @donation.category.name %></p>
-        <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
-        <p class="card-text"><strong>Address: </strong><%= @donation.location %></p>
+<div class="container m-4 d-flex h-100 w-100 position-relative ">
+  <div class= "d-flex justify-content-around">
+    <div class="card d-flex justify-content-between col-4 w-50 mx-5">
+      <h4 class="card-title"><strong><%= @donation.donation_name%></strong></h4>
+      <%= cl_image_tag @donation.image.key, crop: :fill, class: "donation-img w-100 h-50 px-5" %>
+      <div class="card-body w-100  h-50 mt-2 justify-content-around ">
+        <h6 class="card-infos text-muted px-4"><%= @donation.description %></h6>
+        <p class="card-text text-center"><strong>Category: </strong><%= @donation.category.name %></p>
+        <p class="card-text text-center"><strong>Quantity: </strong><%= @donation.quantity %></p>
+        <p class="card-text text-center"><strong>Address: </strong><%= @donation.location %></p>
 
         <% if @donation.user_id == current_user.id %>
           <div class=" d-flex justify-content-around">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="chatroom col-8 h-100 w-50 "
+    <div class="card chatroom col-8 h-100 bordered w-50"
       data-controller="chatroom-subscription"
       data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
       data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -47,7 +47,7 @@
           label: false,
           placeholder: "Message #{@chatroom.name}",
           wrapper_html: { class: 'flex-grow-1' } %>
-          <%= f.submit 'Send', class: 'btn btn-primary' %>
+          <%= f.submit 'Send', class: 'btn btn-send btn-primary' %>
         <% end %>
       </div>
 
