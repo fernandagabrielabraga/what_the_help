@@ -28,3 +28,17 @@ a.btn {
   color: white;
   font-weight: bold;
 }
+
+.btn-index-donation {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #02a95c;
+  transition: background 0.3s ease;
+
+}
+
+.btn-index-donation:hover {
+  background: #02a95c;
+  color: white;
+}

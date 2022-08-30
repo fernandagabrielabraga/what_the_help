@@ -1,22 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inconsolata:wght@300;400&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@200&family=Open+Sans&family=Roboto:wght@900&display=swap');
+
 
 .banner {
   background: #ff5f6d;
   background: -webkit-linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   background: linear-gradient(to right, rgb(0, 166, 113), #ffc371);
   min-height: 100vh;
+  margin-top: 3rem;
   padding-right: 100px;
   padding-left: 100px;
   padding-top: 50px;
 }
 
+.banner-margin-top {
+  margin-top: 3rem;
+}
 .image{
   width: 700px;
   height: 646px;
   border-radius: 15px;
   object-fit: cover;
 }
+
+.cards {
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card {
+  width: 300px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+  color: rgb(70, 74, 70);
+  font-family: 'Open Sans', sans-serif !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card > img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+.btn-edit {
+  background-color: transparent;
+  border: 1px solid #afb9b5;
+  box-sizing: border-box;
+  color: rgb(89, 87, 87);
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+  .btn-edit:hover,
+  .btn-edit:active {
+    outline: 0;
+  }
+
+  .btn-edit:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .btn-edit:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .btn-edit:before {
+    background-color: #bfd9ec;
+  }
+
+  @media (min-width: 768px) {
+    .btn-edit {
+      padding: 16px 32px;
+    }
+  }
 
 .call-to-action {
   text-align: center;
@@ -25,12 +112,39 @@
   font-family: 'lato',  sans-serif;
 }
 
-h1, .lead {
-  color: rgb(70, 74, 70);
-  font-family: 'Hubballi', cursive;
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
+h2 {
+  color: #52afa6;
+  font-size: 2rem;
+  font-family: roboto;
+  font-weight: 600;
+}
+
+.display-4 {
+  font-family: Roboto;
+  text-transform: initial;
+  font-size: 4.5em;
+  line-height: 1.1;
+  //margin-bottom: 55px; espacamento entre display e .lead (deixando sem por enquanto
+  font-weight: 900;
+  color: #52afa6;
+}
+
+.lead {
+  font-family: Roboto;
+  color: #494949;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.text-p-charity {
+  font-family: roboto;
+  font-weight: 100;
+}
+
+.h4-steps-cards {
+  font-family: roboto;
+  
 }
 
 *, *:before, *:after {
@@ -148,9 +262,9 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"] {
-  background: #0d9573;
-  border: 1px solid #0d9573;
-  color: #fff;
+  background: #cbe3fa;
+  border: 1px solid #cbe3fa;
+  color: rgb(120, 110, 110);
   padding: 0 30px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -159,8 +273,8 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"]:hover {
-  background: #0d9573;
-  border: 1px solid #0d9573;
+  background: #95b7d6;
+  border: 1px solid #95b7d6;
 }
 
 .flex-form {
