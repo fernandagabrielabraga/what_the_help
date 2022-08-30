@@ -1,21 +1,19 @@
 <br>
-<div class="container my-3">
-  <div class="row">
-    <div class="card my-3 d-flex justify-content-around align-items-center col-4", style= "width: 384px;">
-      <br>
-      <h5 class="card-title text-center"><strong><%= @donation.donation_name%></strong></h5>
-      <%= cl_image_tag @donation.image.key, height: 300, width: 382, crop: :fill %>
-      <div class="card" style="width: 24rem;">
-        <div class="card-body">
-          <h6 class="card-infos mb-2 text-muted"><%= @donation.description %></h6>
-          <p class="card-text"><strong>Category: </strong><%= @donation.category.name %></p>
-          <p class="card-text"><strong>Quantity: </strong><%= @donation.quantity %></p>
-          <p class="card-text"><strong>Address: </strong><%= @donation.location %></p>
-
+<div class="container m-4 d-flex h-100 w-100 position-relative ">
+  <div class= "d-flex justify-content-around">
+    <div class="card d-flex justify-content-between col-4 w-50 mx-5 mb-5">
+      <%= cl_image_tag @donation.image.key, crop: :fill, class: "donation-img w-100 bordered-3 h-50",style: "border:5px groove #0C9573;"%>
+      <div class="card-body w-100  h-50 mt-2 justify-content-between ">
+        <h3 class="card-title"><strong><%= @donation.donation_name%></strong></h3>
+        <h6 class="card-infos text-muted px-4"><%= @donation.description %></h6>
+        <p class="card-text text-center"><strong>Category: </strong><%= @donation.category.name %></p>
+        <p class="card-text text-center"><strong>Quantity: </strong><%= @donation.quantity %></p>
+        <p class="card-text text-center"><strong>Address: </strong><%= @donation.location %></p>
+        <div>
           <% if @donation.user_id == current_user.id %>
             <div class=" d-flex justify-content-around">
               <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-              <%= link_to 'Edit', edit_donation_path(@donation), class: 'btn btn-primary' %>
+                <%= link_to 'Edit', edit_donation_path(@donation), class: 'btn btn-primary' %>
               <%= link_to 'Back', donations_path, class: 'btn btn-warning' %>
             </div>
           <% else %>
@@ -24,9 +22,7 @@
               <%= link_to 'Back', root_path, class: 'btn btn-warning' %>
             </div>
           <% end %>
-
         </div>
       </div>
     </div>
-  </div>
 </div>
