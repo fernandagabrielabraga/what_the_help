@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inconsolata:wght@300;400&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@200&family=Open+Sans&family=Roboto:wght@900&display=swap');
+
 
 .banner {
   background: #ff5f6d;
@@ -53,6 +55,56 @@
   flex-direction: row;
 }
 
+
+.btn-edit {
+  background-color: transparent;
+  border: 1px solid #afb9b5;
+  box-sizing: border-box;
+  color: rgb(89, 87, 87);
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+  .btn-edit:hover,
+  .btn-edit:active {
+    outline: 0;
+  }
+
+  .btn-edit:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .btn-edit:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .btn-edit:before {
+    background-color: #bfd9ec;
+  }
+
+  @media (min-width: 768px) {
+    .btn-edit {
+      padding: 16px 32px;
+    }
+  }
+
 .call-to-action {
   text-align: center;
 }
@@ -60,12 +112,39 @@
   font-family: 'lato',  sans-serif;
 }
 
-h1, .lead {
-  color: rgb(70, 74, 70);
-  font-family: 'Hubballi', cursive;
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
+h2 {
+  color: #52afa6;
+  font-size: 2rem;
+  font-family: roboto;
+  font-weight: 600;
+}
+
+.display-4 {
+  font-family: Roboto;
+  text-transform: initial;
+  font-size: 4.5em;
+  line-height: 1.1;
+  //margin-bottom: 55px; espacamento entre display e .lead (deixando sem por enquanto
+  font-weight: 900;
+  color: #52afa6;
+}
+
+.lead {
+  font-family: Roboto;
+  color: #494949;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.text-p-charity {
+  font-family: roboto;
+  font-weight: 100;
+}
+
+.h4-steps-cards {
+  font-family: roboto;
+  
 }
 
 *, *:before, *:after {
@@ -183,9 +262,9 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"] {
-  background: #0d9573;
-  border: 1px solid #0d9573;
-  color: #fff;
+  background: #cbe3fa;
+  border: 1px solid #cbe3fa;
+  color: rgb(120, 110, 110);
   padding: 0 30px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -194,8 +273,8 @@ a.btn:hover {
 }
 
 .flex-form input[type="submit"]:hover {
-  background: #0d9573;
-  border: 1px solid #0d9573;
+  background: #95b7d6;
+  border: 1px solid #95b7d6;
 }
 
 .flex-form {
