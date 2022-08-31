@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   resources :donations
   resources :confirmations, only: [:new, :create, :index]
   resources :users, only: [:show]
-  resources :chatrooms, only: [:show] do
-    resources :messages, only: [:create]
+  resources :chatrooms, only: :show
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
   end
-  # Serve websocket cable requests in-process
-  mount ActionCable.server => '/cable'
 end
