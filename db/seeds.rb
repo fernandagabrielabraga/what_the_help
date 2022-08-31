@@ -6,6 +6,8 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Donation.destroy_all
 Category.destroy_all
 Category.create!(name: 'Medical')
 Category.create!(name: 'Emergency')
@@ -33,3 +35,14 @@ create_user('https://res.cloudinary.com/dykf9cult/image/upload/v1661610450/devel
 
 create_user('https://res.cloudinary.com/dykf9cult/image/upload/v1661049962/development/7k7sn47ac1qwpp8d1q916g04a2te.jpg', { email: 'fernandaquetcia@gmail.com', password: '123456', first_name: 'Fernanda', last_name: 'Chagas'})
 
+
+def create_donation(url, content, user)
+  file = URI.open(url)
+  donation = Donation.new(content)
+  donation.image.attach(io: file, filename: 'donation.png', content_type: 'image/png')
+  donation.user = user
+  donation.save
+end
+
+create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Blood Type O-', description: " My friend had an accident and urgently needs type O Negative blood donation.", category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" }, User.find(1))
+create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Blood Type O-', description: " My friend had an accident and urgently needs type O Negative blood donation.", category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" }, User.find(2))
