@@ -1,0 +1,20 @@
+<div class="container">
+  <h3 class= "text-center mt-5 mb-5">Thanks for your review !</h3>
+  <div id="success" class= "mb-5">
+    <div class="face">
+        <div class="eye"></div>
+        <div class="eye right"></div>
+        <div class="mouth happy"></div>
+      </div>
+      <div class="shadow scale"></div>
+      <div class="message mt-3"><p><%= @review.content %></p></div>
+      <br>
+      <div id= "stars" class= "d-flex align-content-center align-items-center ">
+        <% @review.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+      </div>
+      <%= link_to "Back to Home", root_path, class: "btn button-box btn-outline-secondary mt-4" %>
+    </div>
+  </div>
+</div>
