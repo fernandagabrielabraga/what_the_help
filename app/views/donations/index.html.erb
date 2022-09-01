@@ -1,12 +1,14 @@
-<div class="container d-flex">
-<div class="container">
-  <div class="title-campaigns">Procurar Campanhas</div>
-  <div class="heading-campaigns">Pessoas no mundo inteiro estão utilizando
-   nossa plataforma e acelerando seus resultados</div>
-  <%=link_to "/donations/new" do %> <p class="btn btn-sucess btn-index-donation">START DONATION HERE</p>
-  <%end%>
+
+<div class="container search-campaigns row col p-2 m-4">
+  <div class="container ">
+    <div class="title-campaigns">Search Campaigns</div>
+    <div class="heading-campaigns">People all over the world are
+    using our platform and accelerating their results</div>
+    <%=link_to "/donations/new" do %> <p class="btn btn-sucess btn-index-donation">START DONATION HERE</p>
+    <%end%>
+  </div>
 </div>
-</div>
+
 <div class="container_donations d-flex h-100 w-100 position-relative">
   <div class="grid-donations mx-2 h-100 d-flex flex-wrap justify-content-around" style="width: 60%;">
     <% if @donations.empty? %>
@@ -21,7 +23,7 @@
           <div class="d-flex justify-content-between">
             <h4 class="card-title"><strong><%= donation.donation_name %></strong></h4>
             <div>
-              <i class="fas fa-eye"></i> <%= rand(50..1000) %> views <!-- Comentario aqui ><!-->
+              <i class="fas fa-eye"></i> <%= rand(50..499) %> views <!-- Comentario aqui ><!-->
             </div>
           </div>
           <div class="mb-2 mt-2 d-flex align-content-center">
