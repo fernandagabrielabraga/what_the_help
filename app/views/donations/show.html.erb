@@ -25,4 +25,30 @@
         </div>
       </div>
     </div>
+      <div class="row">
+        <div class="chatroom d-flex col- h-100 bordered w-50 mb-5"
+          data-controller="chatroom-subscription"
+          data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+          data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+
+          <h1>#<%= @chatroom.name %></h1>
+
+          <div class="messages" data-chatroom-subscription-target="messages">
+            <% @chatroom.messages.each do |message| %>
+              <%= render "messages/message", message: message %>
+            <% end %>
+          </div>
+
+          <%= simple_form_for [@chatroom, @message],
+          remote: true,
+          html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f| %>
+            <%= f.input :content,
+            label: false,
+            placeholder: "Message ##{@chatroom.name}",
+            wrapper_html: {class: "flex-grow-1"} %>
+            <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+          <% end %>
+        </div>
+      </div>
+  </div>
 </div>
