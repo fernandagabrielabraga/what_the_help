@@ -22,10 +22,13 @@ class DonationsController < ApplicationController
         }
       end
     end
-    @helped_people = [55, 75, 89, 100, 250]
+    @helped_people = [50, 75, 89, 100, 250,]
   end
 
   def show
+    @chatroom = Chatroom.where(donation: @donation).first
+    @chatroom = Chatroom.new(user: current_user, donation: @donation, name: @donation.donation_name) if @chatroom.nil?
+    @message = Message.new
     authorize @donation
   end
 
