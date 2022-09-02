@@ -1,20 +1,15 @@
-  <br>
-  <div class="container">
+<div class="container mt-4 px-5">
   <h1 class="create__new__donation">Tell us what you need:</h1>
-  </div>
-  <div class="container text_form_donations">
-    <%= simple_form_for @donation do |f| %>
-      <%= f.input :donation_name, label: 'Add what you need here', error: 'Donation name is mandatory, please specify one' %>
-      <%= f.input :quantity, label: 'Add the quantity here.' %>
-      <%= f.input :description, label: 'What is the necessity of your needs/donation? Add the description here' %>
-      <%= f.association :category, collection: Category.order(:name), prompt: 'Choose a Category' %>
-      <%= f.input :location, prompt: 'Add your city, state and country here' %>
-      <%= f.input :image, as: :file %>
-      <br>
-      <%= f.button :submit, class: "btn btn-info" %>
-      <br>
-      <br>
-      <%= link_to 'Back', root_path, class: "btn btn-sucess" %>
-    <% end %>
-  </div>
-  <br>
+</div>
+<div class="container text_form_donations px-5">
+  <%= simple_form_for @donation do |f| %>
+    <%= f.input :donation_name, label: 'Add what you need here', error: 'Donation name is mandatory, please specify one' %>
+    <%= f.input :quantity, label: 'Add the quantity here.' %>
+    <%= f.input :description, label: 'What is the necessity of your needs/donation? Add the description here' %>
+    <%= f.association :category, collection: Category.order(:name), prompt: 'Choose a Category' %>
+    <%= f.input :location, prompt: 'Add your city, state and country here' %>
+    <%= f.input :image, as: :file %>
+    <%= f.button :submit, class: "btn btn-info mt-2 mb-4" %>
+    <div><%= link_to 'Back', root_path, class: "btn btn-sucess mb-3" %></div>
+  <% end %>
+</div>
