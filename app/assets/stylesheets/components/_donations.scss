@@ -17,15 +17,25 @@ color: #0D9573;
   border-radius: 15px;
 }
 
-.donation-img {
-  background-size: cover;
-  height: 300px;
-  object-fit: cover;
+.thumbnail {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
-
-.donation-body {
-
-
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
 }
 
 .donation-card {
