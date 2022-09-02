@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Inconsolata:wght@300;400&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@200&family=Open+Sans&family=Roboto:wght@900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif&family=Montserrat:wght@100&family=Work+Sans:wght@300&display=swap');
 
 .banner {
   background: #ff5f6d;
@@ -115,12 +115,12 @@
 h2 {
   color: #52afa6;
   font-size: 2rem;
-  font-family: roboto;
+  font-family: ibm plex serif;
   font-weight: 600;
 }
 
 .display-4 {
-  font-family: Roboto;
+  font-family: ibm plex serif;
   text-transform: initial;
   font-size: 4.5em;
   line-height: 1.1;
@@ -130,7 +130,7 @@ h2 {
 }
 
 .lead {
-  font-family: Roboto;
+  font-family: work sans;
   color: #494949;
   font-size: 1.5rem;
   font-weight: 400;
@@ -138,14 +138,26 @@ h2 {
 }
 
 .text-p-charity {
-  font-family: roboto;
+  font-family: work sans;
   font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  opacity: .8;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .h4-steps-cards {
-  font-family: roboto;
-
+  font-family: ibm plex serif;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
+
+.p_name_steps {
+  font-family: work sans;
+}
+
+
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
