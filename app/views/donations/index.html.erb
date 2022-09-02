@@ -1,16 +1,17 @@
 <div class="container d-flex">
 <div class="container">
-  <div class="title-campaigns">Procurar Campanhas</div>
-  <div class="heading-campaigns">Pessoas no mundo inteiro estão utilizando
-  nossa plataforma e acelerando seus resultados</div>
-  <%=link_to "/donations/new" do %> <p class="btn btn-sucess btn-index-donation">START DONATION HERE</p>
+  <div class="title-campaigns">Discover who needs your support</div>
+  <div class="heading-campaigns">People all over the world are using what the HELP! and finding great supporters around here.
+  Need some help today?</div>
+  <br>
+  <%=link_to "/donations/new" do %> <p class="btn btn-edit"><i class="fas fa-heart"></i> START HERE</p>
   <%end%>
 </div>
 </div>
 <div class="container_donations d-flex h-100 w-100 position-relative">
   <div class="grid-donations mx-2 h-100 d-flex flex-wrap justify-content-around" style="width: 60%;">
     <% if @donations.empty? %>
-      <h3><i class="fas fa-couch"></i> Sorry, couldn't find what you're looking for.</h3>
+      <h5>Sorry, we couldn't find what you're looking for.</h5>
     <% else %>
       <% @donations.each_with_index do |donation, index| %>
         <div class="donation-card card d-flex flex-column align-items-center p-2 m-2">
