@@ -37,7 +37,7 @@ case Rails.env
 
     create_user(
       'https://res.cloudinary.com/dykf9cult/image/upload/v1661298268/development/16pihv2ddf2qj1p55mdnsq4n6036.jpg',
-      { email: 'angela.hawerroth@gmail.com', password: '123456', first_name: 'Angela', last_name: 'hawerroth Amaral' })
+      { email: 'angela.hawerroth@gmail.com', password: '123456', first_name: 'Angela', last_name: 'Hawerroth Amaral' })
 
     create_user(
       'https://res.cloudinary.com/dykf9cult/image/upload/v1661394371/development/31vrgo5cq8x842r3fhuqer8mwoik.jpg',
