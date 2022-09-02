@@ -43,6 +43,12 @@ require "open-uri"
 
   create_user('https://res.cloudinary.com/dykf9cult/image/upload/v1661049962/development/7k7sn47ac1qwpp8d1q916g04a2te.jpg', { email: 'fernandaquetcia@gmail.com', password: '123456', first_name: 'Fernanda', last_name: 'Chagas'})
 
+  create_user('https://res.cloudinary.com/dykf9cult/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1662079910/development/WhatsApp_Image_2022-09-01_at_6.36.58_PM_hkp2is.jpg', { email: 'maria@gmail.com', password: '123456', first_name: 'Maria', last_name: 'Santos'})
+
+  create_user('https://res.cloudinary.com/dykf9cult/image/upload/v1662080002/development/WhatsApp_Image_2022-09-01_at_6.44.43_PM_c78g0g.jpg', { email: 'cmb_blumenau@cmb.com', password: '123456', first_name: 'Maria', last_name: 'Cavalcanti'})
+
+  create_user('https://res.cloudinary.com/dykf9cult/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1662079988/development/WhatsApp_Image_2022-09-01_at_6.34.18_PM_qxcvtr.jpg', { email: 'anthony.watts@gmail.com', password: '123456', first_name: 'Anthony ', last_name: 'Watts'})
+
 
   def create_donation(url, content, user)
     file = URI.open(url)
@@ -52,9 +58,9 @@ require "open-uri"
     donation.save
   end
 
-  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg", { donation_name: 'Blood Type O-', description: " My friend had an accident and urgently needs type O Negative blood donation.", category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" }, User.find(1))
-  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharper/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Agasalho Infantil', description: "Preciso de agasalhos para meu filho de 8 anos e  minhas filhas de 4 anos. Estou desempregada e o salário do meu esposo só é suficiente para pagar as despesas mensais da casa.", category: Category.find_by(name: "Charity"), quantity: 40, location: "Curitiba, Paraná, Brasil}" }, User.find(2))
-  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharper/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Brinquedos', description: "Brinquedos educativos que ajudam no aprendizado e na imaginação. Brinquedos voltados para crianças do pré-escolar de uma escola que perdeu todo o seu material em uma catástrofe natural.", category: Category.find_by(name: "Education"), quantity: 120, location: " Blumenau, Santa Catarina, Brasil’ " }, User.find(3))
+  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg", { donation_name: 'Blood Type O-', description: " My friend had an accident and urgently needs type O Negative blood donation.", category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" }, User.find_by(email:"angela.hawerroth@gmail.com"))
+  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Agasalho Infantil', description: "Preciso de agasalhos para meu filho de 8 anos e  minhas filhas de 4 anos. Estou desempregada e o salário do meu esposo só é suficiente para pagar as despesas mensais da casa.", category: Category.find_by(name: "Charity"), quantity: 40, location: "Curitiba, Paraná, Brasil}" }, User.find_by(email:"maria@gmail.com"))
+  create_donation("https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",{ donation_name: 'Brinquedos', description: "Brinquedos educativos que ajudam no aprendizado e na imaginação. Brinquedos voltados para crianças do pré-escolar de uma escola que perdeu todo o seu material em uma catástrofe natural.", category: Category.find_by(name: "Education"), quantity: 120, location: " Blumenau, Santa Catarina, Brasil’ " }, User.find_by(email:"cmb_blumenau@cmb.com"))
 
 
 #   when 'production'
