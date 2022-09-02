@@ -84,27 +84,27 @@ case Rails.env
         category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" },
         User.find_by(email:"angela.hawerroth@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159884/development/WhatsApp_Image_2022-08-30_at_7.36.39_AM_f4oz0a.jpg",
       { donation_name: 'Agasalho Infantil', description: "Preciso de agasalhos para meu filho de 8 anos e  minhas filhas de 4 anos. Estou desempregada e o salário do meu esposo só é suficiente para pagar as despesas mensais da casa.",
         category: Category.find_by(name: "Charity"), quantity: 40, location: "Curitiba, Paraná, Brasil" },
         User.find_by(email:"maria@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159890/development/WhatsApp_Image_2022-08-30_at_7.36.37_AM_li9rt6.jpg",
       { donation_name: 'Brinquedos', description: "Brinquedos educativos que ajudam no aprendizado e na imaginação. Brinquedos voltados para crianças do pré-escolar de uma escola que perdeu todo o seu material em uma catástrofe natural.",
         category: Category.find_by(name: "Education"), quantity: 120, location: " Blumenau, Santa Catarina, Brasil" },
         User.find_by(email:"cmb_blumenau@cmb.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159892/development/WhatsApp_Image_2022-08-30_at_7.36.36_AM_cbdkhr.jpg",
       { donation_name: 'Books', description: "Portuguese and English Books to teach and incentive children and youth in the Casa Vida to read. To know well who are you going to help, Casa Vida is an organization that gives support for children and   youth. Casa Vida focuses its care on restoring the health, well-being and self-esteem of girls victims of violence and sexual abuse in Timor-Leste.",
         category: Category.find_by(name: "Education"), quantity: 200, location: " Lecidere, Dili, East Timor " },
         User.find_by(email:"anthony.watts@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159882/development/WhatsApp_Image_2022-09-02_at_3.54.27_AM_lvbq0p.jpg",
       { donation_name: 'Back to Home', description: "My friend discover that her is with a serious illness. She needs $1200 and you can help with one click to donate $20. ",
         category: Category.find_by(name: "Medical"), quantity:60, location: " Delta, Dili, East Timor " },
         User.find_by(email:"anthony.watts@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159888/development/WhatsApp_Image_2022-08-30_at_7.36.38_AM_exv6rs.jpg",
       { donation_name: 'Voluntários', description: "Eles receberão  a doação do material do Le Wagon, mas não tem orçamento para concluir as obras. ",
         category: Category.find_by(name: "Volunteer"), quantity: 32, location: " Vila Madalena, São Paulo, Brasil " },
         User.find_by(email:"santiles87@gmail.com"))
@@ -155,27 +155,27 @@ case Rails.env
         category: Category.find_by(name: "Medical"), quantity: 12, location: " Galway, Connacht, Ireland" },
         User.find_by(email:"angela.hawerroth@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159884/development/WhatsApp_Image_2022-08-30_at_7.36.39_AM_f4oz0a.jpg",
       { donation_name: 'Agasalho Infantil', description: "Preciso de agasalhos para meu filho de 8 anos e  minhas filhas de 4 anos. Estou desempregada e o salário do meu esposo só é suficiente para pagar as despesas mensais da casa.",
         category: Category.find_by(name: "Charity"), quantity: 40, location: "Curitiba, Paraná, Brasil" },
         User.find_by(email:"maria@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159890/development/WhatsApp_Image_2022-08-30_at_7.36.37_AM_li9rt6.jpg",
       { donation_name: 'Brinquedos', description: "Brinquedos educativos que ajudam no aprendizado e na imaginação. Brinquedos voltados para crianças do pré-escolar de uma escola que perdeu todo o seu material em uma catástrofe natural.",
         category: Category.find_by(name: "Education"), quantity: 120, location: " Blumenau, Santa Catarina, Brasil" },
         User.find_by(email:"cmb_blumenau@cmb.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159892/development/WhatsApp_Image_2022-08-30_at_7.36.36_AM_cbdkhr.jpg",
       { donation_name: 'Books', description: "Portuguese and English Books to teach and incentive children and youth in the Casa Vida to read. To know well who are you going to help, Casa Vida is an organization that gives support for children and   youth. Casa Vida focuses its care on restoring the health, well-being and self-esteem of girls victims of violence and sexual abuse in Timor-Leste.",
         category: Category.find_by(name: "Education"), quantity: 200, location: " Lecidere, Dili, East Timor " },
         User.find_by(email:"anthony.watts@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159882/development/WhatsApp_Image_2022-09-02_at_3.54.27_AM_lvbq0p.jpg",
       { donation_name: 'Back to Home', description: "My friend discover that her is with a serious illness. She needs $1200 and you can help with one click to donate $20. ",
         category: Category.find_by(name: "Medical"), quantity:60, location: " Delta, Dili, East Timor " },
         User.find_by(email:"anthony.watts@gmail.com"))
     create_donation(
-      "https://res.cloudinary.com/dykf9cult/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1661870543/development/2cmijurh005fhrpaxq39nkumifnk.jpg",
+      "https://res.cloudinary.com/dykf9cult/image/upload/v1662159888/development/WhatsApp_Image_2022-08-30_at_7.36.38_AM_exv6rs.jpg",
       { donation_name: 'Voluntários', description: "Eles receberão  a doação do material do Le Wagon, mas não tem orçamento para concluir as obras. ",
         category: Category.find_by(name: "Volunteer"), quantity: 32, location: " Vila Madalena, São Paulo, Brasil " },
         User.find_by(email:"santiles87@gmail.com"))
