@@ -3,7 +3,10 @@
 <div class="row justify-content-between">
   <div class= "col-xs-6 col-md-6">
     <div class="card-donation-page card justify-content-between align-items-center">
-      <%= cl_image_tag @donation.image.key, crop: :fill, class: "donation-img w-100 bordered-3 h-50",style: "border:5px groove #0C9573;"%>
+      <%# cl_image_tag @donation.image.key, crop: :fill, class: "donation-img w-100 bordered-3 h-50",style: "border:5px groove #0C9573;"%>
+      <div class="thumbnail-donation ">
+        <img src="<%= cl_image_path @donation.image.key %>" class="portrait-donation" alt="Image">
+      </div>
       <div class="card-body justify-content-between">
         <h3 class="card-title"><strong><%= @donation.donation_name%></strong></h3>
         <h6 class="card-infos text-muted px-4"><%= @donation.description %></h6>
@@ -20,7 +23,7 @@
           <% else %>
             <div class=" btn-block justify-content-around">
               <%= link_to 'Donate now', root_path, class: "btn btn-success", data: { confirm: 'thank you for your donation' } %>
-              <%= link_to 'Back', root_path, class: "btn btn-warning" %>
+              <%= link_to 'Back', donations_path, class: "btn btn-warning" %>
             </div>
           <% end %>
         </div>
