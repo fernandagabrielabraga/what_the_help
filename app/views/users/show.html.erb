@@ -1,27 +1,26 @@
 <div class="profile d-flex justify-content-center mt-2">
-  <figure>
-    <img class="photo-profile border border-3 rounded-circle m-5" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/55758/random-user-31.jpg" alt="" />
+  <figure class="figure-profile mt-5 p-5 ">
+    <% if current_user.avatar.attached? %>
+            <%= cl_image_tag current_user.avatar.key, class:"border border-3 rounded-circle"%>
+          <% else %>
+              <%= image_tag ("download.jpeg")%>
+          <% end %>
+    <!--<img class="photo-profile border border-3 rounded-circle m-5" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/55758/random-user-31.jpg" alt="" />-->
   </figure>
-  <header>
-    <h1>Maria Gonzalez</h1>
-      <p>Client Happiness Manager</p>
-  </header>
-  <div class="list list-profile border border-3 m-5 border rounded-5 p-4 mx-2 ">
-      <h2>Full name </h2> <p>Maria Josephina Gonzalez</p>
-      <h2>Date of birth</h2>
-        <dd>August 27, 1987</dd>
+
+  <div class="list list-profile bg-white border border-3 m-5 border rounded-5 p-5 mx-2" >
+      <h2>Name</h2>
+      <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+      <h2>Email </h2>
+      <p><%= current_user.email %></p>
+      <h2>My Donations</h2>
+        <dd>12 donations realized</dd>
       <h2>Hometown</h2>
-        <dd>Barcelona, Spain</dd>
-      <h2>Occupation</h2>
-        <dd>Client Happiness Manager</dd>
-      <h2>Loves</h2>
-        <dd>Skydiving, Tennis, Romantic dinners</dd>
-      <h2>Hates</h2>
-        <dd>Taxes, bosses instead of leaders</dd>
-      <h2>Social</h2>
-        <dd>
-          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-        </dd>
+        <dd>Sao Paulo, Brazil</dd>
+      <h2>Rewards</h2>
+        <dd>xxxxx</dd>
+          <div class="edit-account">
+         <%= link_to "Edit my account", edit_user_registration_path(current_user), class:"btn btn-flat" %></p>
+         </div>
   </div>
 </div> <!-- end profile -->
