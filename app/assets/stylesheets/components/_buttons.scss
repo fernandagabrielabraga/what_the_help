@@ -1,0 +1,58 @@
+a.btn {
+  padding: 8px 24px;
+}
+.btn-success {
+  color: white;
+  font-weight: bold;
+  background: linear-success(#167FFB, #28A745);
+  transition: background 0.3s ease;
+  border: 1px solid #28A745;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
+.btn-danger {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-warning {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-index-donation {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #02a95c;
+  transition: background 0.3s ease;
+  font-family: work sans;
+
+}
+
+.btn-index-donation:hover {
+  background: #02a95c;
+  color: white;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #670BFF;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #4D04C4;
+  color: white;
+}
