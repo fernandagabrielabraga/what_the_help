@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
 
+# Cloudinary
+
+gem 'cloudinary', '~> 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 # Use postgresql as the database for Active Record
@@ -21,7 +24,16 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'file_validators'
+# authorization user
+gem 'pundit'
+gem 'jquery-rails'
+gem 'sprockets', '>=3.0.0.beta'
+gem 'sprockets-es6'
 
+#geocoder
+gem "geocoder"
+gem "open-uri"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -29,9 +41,11 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+# Gema para completar pesquisa na NavBar
+gem 'pg_search', '~> 2.3.0'
 
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.15.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
