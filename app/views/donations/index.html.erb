@@ -31,7 +31,7 @@
           </div>
             <p class="card-text"><%= donation.description.truncate(100) %></p> <!-- Comentario aqui ><!-->
           <div class="mb-2 mt-2 d-flex align-content-center">
-            <label for=""><i class="fas fa-hands-helping"></i> <%= @helped_people[index] %> persons donated</label>
+            <label for=""><i class="fas fa-hands-helping"></i> <%= donation.donation_received %> persons donated</label>
           </div>
             <%= link_to 'Donation', donation,class:"btn btn-primary" %>
           </div>
