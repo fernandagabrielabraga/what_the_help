@@ -2,7 +2,7 @@ class DonationPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope
+      scope.where(available:true)
     end
   end
 
@@ -14,8 +14,11 @@ class DonationPolicy < ApplicationPolicy
     true
   end
 
-  def update?
+  def edit?
     record.user == user
+  end
+  def update?
+    true
     # - record: the restaurant passed to the `authorize` method in controller
     # - user:   the `current_user` signed in with Devise.
   end
