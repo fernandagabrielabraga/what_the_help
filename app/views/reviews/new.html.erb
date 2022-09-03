@@ -1,0 +1,13 @@
+<div class="container p-5 mb-5">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= simple_form_for @review do |f| %>
+        <%= f.input :content %>
+        <%= f.input :rating, collection: (1..5).to_a.reverse!, label: "Rate your experience", include_blank: false %>
+        <div>
+          <%= f.submit "Send your review", class: "btn btn-info", style: "margin-top: 2rem;"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

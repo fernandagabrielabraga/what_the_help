@@ -26,6 +26,9 @@ class DonationsController < ApplicationController
   end
 
   def show
+    @chatroom = Chatroom.where(donation: @donation).first
+    @chatroom = Chatroom.create!(user: current_user, donation: @donation, name: @donation.donation_name) if @chatroom.nil?
+    @message = Message.new
     authorize @donation
   end
 

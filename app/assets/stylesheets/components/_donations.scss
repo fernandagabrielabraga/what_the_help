@@ -17,15 +17,25 @@ color: #0D9573;
   border-radius: 15px;
 }
 
-.donation-img {
-  background-size: cover;
-  height: 300px;
-  object-fit: cover;
+.thumbnail {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
-
-.donation-body {
-
-
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
 }
 
 .donation-card {
@@ -37,10 +47,16 @@ color: #0D9573;
   font-size: 2.5rem;
   line-height: 5rem;
   font-weight: 900;
+  color: #4c5057;
 }
 
 .heading-campaigns {
   font-family: work sans;
   font-size: 1.5rem;
   font-weight: 100;
+  color: #4c5057;
+}
+
+.h5 {
+  color: #56585b;
 }
