@@ -22,3 +22,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.start-here {
+  text-decoration: none !important;
+}
+
+.start-here:hover {
+  color: #56585b !important;
+}
