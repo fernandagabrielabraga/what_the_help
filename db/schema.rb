@@ -51,12 +51,8 @@ ActiveRecord::Schema.define(version: 2022_08_30_222716) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id", null: false
-    t.bigint "donation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["donation_id"], name: "index_chatrooms_on_donation_id"
-    t.index ["user_id"], name: "index_chatrooms_on_user_id"
   end
 
   create_table "confirmations", force: :cascade do |t|
@@ -123,8 +119,6 @@ ActiveRecord::Schema.define(version: 2022_08_30_222716) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "chatrooms", "donations"
-  add_foreign_key "chatrooms", "users"
   add_foreign_key "confirmations", "donations"
   add_foreign_key "confirmations", "users"
   add_foreign_key "donations", "categories"
