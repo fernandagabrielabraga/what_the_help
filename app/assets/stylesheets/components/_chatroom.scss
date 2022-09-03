@@ -1,15 +1,16 @@
 .chatroom {
   background: white;
   // margin-top: 9px;
-  margin-bottom: 12px;
-  height: 750px;
-  width: 700px;
+  margin-bottom: 3%;
+  height: 680px;
+  width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
   border-radius: 6px;
   box-shadow: 10px 3px 10px #E6E6E6;
+  margin-top: 2%;
 
 
   h1 {
