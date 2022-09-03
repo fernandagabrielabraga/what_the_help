@@ -26,13 +26,11 @@
             <%= link_to "Donations", donations_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.email %></a>
+            <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.first_name %></a>
           <li class="nav-item dropdown">
           </li>
           <% if current_user.avatar.attached? %>
             <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-
-            <p class= "ps-2 pt-2"><%= current_user.first_name%></p>
           <% else %>
               <%= image_tag ("download.jpeg"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
