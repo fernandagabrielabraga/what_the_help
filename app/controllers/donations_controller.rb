@@ -55,7 +55,6 @@ class DonationsController < ApplicationController
 
   def update
     @donation.update(donation_params)
-    # @donation.available = @donation.quantity == @donation.donation_received ? false : true
     authorize @donation
     redirect_to donations_path
   end
