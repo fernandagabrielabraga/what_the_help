@@ -6,19 +6,6 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< Updated upstream
-=======
-Category.destroy_all
-User.destroy_all
-Category.create!(name: 'Medical')
-Category.create!(name: 'Emergency')
-Category.create!(name: 'Education')
-Category.create!(name: 'Animals')
-Category.create!(name: 'Volunteer')
-Category.create!(name: 'Charity')
-Category.create!(name: 'Memorial')
-User.create!(email: 'fernanda@email.com', password: '123456', first_name: 'fernanda', last_name: 'chagas')
->>>>>>> Stashed changes
 
 case Rails.env
   when 'development'

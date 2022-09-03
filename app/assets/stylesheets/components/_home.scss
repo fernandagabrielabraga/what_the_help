@@ -384,3 +384,46 @@ input[type="search"] {
     display: none;
   }
 }
+
+body {
+   text-align: center;
+}
+.row {
+  margin-top:70px;
+}
+.counter{
+  color: #f1c232;
+  text-align: center !important;
+  align-items: center !important;
+}
+div.col-md-2{
+  border-right:#ddd solid 0.1px;
+  text-align: center;
+}
+div.col-md-2:last-child{
+  border-right:#ddd solid 0px;
+  text-align: center;
+}
+
+.counting-header {
+  font-family: work sans;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.counting-title {
+  font-family: ibm plex serif;
+}
+
+.subtitle-counting {
+  font-size: 1.3rem;
+  color: #56585b;
+}
+
+.value-counting {
+  color: #f0bb02
+}
+
+.butwhy {
+  text-align: left;
+}
