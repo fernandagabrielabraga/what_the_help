@@ -22,7 +22,6 @@ class DonationsController < ApplicationController
         }
       end
     end
-    @helped_people = [50, 75, 89, 100, 250,]
   end
 
   def show
@@ -56,6 +55,7 @@ class DonationsController < ApplicationController
 
   def update
     @donation.update(donation_params)
+    # @donation.available = @donation.quantity == @donation.donation_received ? false : true
     authorize @donation
     redirect_to donations_path
   end
@@ -69,7 +69,7 @@ class DonationsController < ApplicationController
   private
 
   def donation_params
-    params.require(:donation).permit(:donation_name, :description, :image, :category_id, :location, :quantity)
+    params.require(:donation).permit(:donation_name, :description, :image, :category_id, :location, :quantity, :available, :donation_received)
   end
 
   def donation_id
