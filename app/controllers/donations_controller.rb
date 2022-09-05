@@ -56,6 +56,8 @@ class DonationsController < ApplicationController
   def update
     @donation.update(donation_params)
     authorize @donation
+    @confirmation = Confirmation.create
+    raise
     redirect_to donations_path
   end
 

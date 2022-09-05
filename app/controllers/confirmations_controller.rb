@@ -1,6 +1,7 @@
 class ConfirmationsController < ApplicationController
   before_action :confirmation_params, only: %i[create]
   before_action :donation_id, only: %i[new create]
+  before_action :user_id, only: %i[new create]
   def index
     @confirmations =  policy_scope(Confirmation)
   end
@@ -20,7 +21,7 @@ class ConfirmationsController < ApplicationController
   private
 
   def confirmation_params
-    params.require(:confirmation).permit(:donation_id)
+    params.require(:confirmation).permit(:donation_id, :user_id)
   end
 
   def donation_id_
