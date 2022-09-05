@@ -6,6 +6,11 @@ class ConfirmationsController < ApplicationController
     @confirmations =  policy_scope(Confirmation)
   end
 
+  def show
+   @confirmation = Confirmation.where(user_id:current_user)
+   authorize @confirmation
+  end
+
   def new
     @confirmation = Confirmation.new
     authorize @confirmation
