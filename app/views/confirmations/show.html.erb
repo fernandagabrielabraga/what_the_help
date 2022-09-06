@@ -7,7 +7,11 @@
   <div class="grid-donations mx-2 mt-2 h-100 d-flex flex-wrap justify-content-around ">
     <% if @confirmation.empty? %>
       <div class="p-5 m-5">
-        <h4>Sorry, you don't donated yet!</h4>
+        <h4>Sorry, you haven’t donated yet. 🙁 Feel like helping someone today?</h4>
+        <div class="pt-5 m-5">
+          <%=link_to "/donations/new", class:"start-here" do %> <p class="btn btn-edit"><i class="fas fa-heart"></i> START HERE</p>
+          <% end %>
+        </div>
       </div>
     <% else %>
       <% @confirmation.each_with_index do |confirmation, index| %>
