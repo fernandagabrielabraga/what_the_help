@@ -16,14 +16,14 @@
         <div>
           <% if @donation.user_id == current_user.id %>
             <div class="btn-block">
-              <%= link_to 'Delete', donation_path(@donation), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
-              <%= link_to 'Edit', edit_donation_path(@donation), class: 'btn btn-primary ' %>
-              <%= link_to 'Back', donations_path, class: 'btn btn-warning ' %>
+              <%= link_to 'Delete', donation_path(@donation), class: "button btn-chat-delete", method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Edit', edit_donation_path(@donation), class: "button btn-chat" %>
+              <%= link_to 'Back', donations_path, class: "button btn-chat" %>
             </div>
           <% else %>
             <div class=" btn-block justify-content-around">
-              <%= link_to 'Donate now', donation_path(@donation, donation:{ donation_received: @donation.donation_received + 1, available: @donation.quantity == @donation.donation_received + 1 ? false : true }), method: :patch,  class: "btn btn-success", data: {confirm: "Thank you for your donation!"} %>
-              <%= link_to 'Back', donations_path, class: "btn btn-warning" %>
+              <%= link_to 'Donate now', donation_path(@donation, donation:{ donation_received: @donation.donation_received + 1, available: @donation.quantity == @donation.donation_received + 1 ? false : true }), method: :patch,  class: "btn-donation-now", data: {confirm: "Thank you for your donation!"} %>
+              <%= link_to 'Back', donations_path, class: "btn-chat" %>
             </div>
           <% end %>
         </div>
@@ -54,7 +54,7 @@
         label: false,
         placeholder: "Message ##{@chatroom.name}",
         wrapper_html: {class: "flex-grow-1"} %>
-        <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+        <%= f.submit "Send", class: "btn-chat btn-primary mb-3" %>
       <% end %>
     </div>
   </div>
