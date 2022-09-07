@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @total_donations = Confirmation.where(user_id:current_user).count
     authorize @user
   end
 end
