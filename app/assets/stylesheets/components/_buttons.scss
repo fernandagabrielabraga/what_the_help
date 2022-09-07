@@ -1,6 +1,7 @@
 a.btn {
   padding: 8px 24px;
 }
+
 .btn-success {
   color: white;
   font-weight: bold;
@@ -36,7 +37,6 @@ a.btn {
   background: #02a95c;
   transition: background 0.3s ease;
   font-family: work sans;
-
 }
 
 .btn-index-donation:hover {
@@ -54,5 +54,51 @@ a.btn {
 
 .btn-flat:hover {
   background: #4D04C4;
+  color: white;
+}
+
+.btn {
+  padding: 8px 24px;
+}
+
+.btn-chat-delete {
+  background: #CBE3FA;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: #499CEC;
+  color: #56585A;
+  font-weight: bold;
+}
+
+.btn-chat {
+  background: #CBE3FA;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: #499CEC;
+  color: #56585A;
+  font-weight: bold;
+}
+
+.btn-chat:hover {
+  background: #9BC8F3;
+  color: white;
+}
+
+.btn-chat-delete:hover {
+  background: #BC4E57;
+  color: white;
+}
+
+.btn-donation-now {
+  background: #fdbb7a;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: #499CEC;
+  color: #56585A;
+  font-weight: bold;
+}
+
+.btn-donation-now:hover {
+  background: #9BC8F3;
   color: white;
 }
