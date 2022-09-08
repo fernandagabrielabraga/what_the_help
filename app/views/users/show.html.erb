@@ -1,5 +1,6 @@
 <div class="profile d-flex justify-content-center mt-2">
-  <figure class="figure-profile mt-5 p-5 ">
+  <figure class="figure-profile p-5 d-flex justify-content-around
+  align-items-center ">
     <% if current_user.avatar.attached? %>
             <%= cl_image_tag current_user.avatar.key, :size => "400x400", class:"border border-3 rounded-circle"%>
           <% else %>
