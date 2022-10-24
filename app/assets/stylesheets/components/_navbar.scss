@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +15,10 @@
 .position-sticky {
   top: 0;
   z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .flex-form {
+    width: 70% !important;
+  }
 }
